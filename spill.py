@@ -12,3 +12,13 @@ enviornment = [
     [1, 0, 0, 0, 1],
     [1, 1, 1, 1, 1]
 ]
+fov = 80
+xpos, ypos = (1, 1)
+rot_r = math.pi/4
+
+run = True
+while run:
+    
+    for e in pygame.event.get():
+        if e.type == quit:
+            run = False
