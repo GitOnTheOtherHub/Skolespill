@@ -12,41 +12,42 @@ while run:
             run = False
 pygame.quit()
 
-walkwest = False
-walkeast = False
-Walknorth = False
-Walksouth = False
+Walkleft = False
+Walkright = False
+Walkup = False
+Walkdown = False
 
 if event.type == pygame.KEYDOWN:
     if event.key == pygame.K_w:
-        Walknorth = True
+        Walkup = True
+        
 
 if event.type == pygame.KEYDOWN:
     if event.key == pygame.K_a:
-        walkeast = True
+        Walkleft = True
 
 if event.type == pygame.KEYDOWN:
     if event.key == pygame.K_s:
-        Walksouth = True
+        Walkdown = True
 
 if event.type == pygame.KEYDOWN:
     if event.key == pygame.K_d:
-        Walkwast = True
+        Walkright = True
 
 
 if event.type == pygame.KEYUP:
     if event.key == pygame.K_w:
-        Walknorth = False
+        Walkup = False
 
 if event.type == pygame.KEYUP:
     if event.key == pygame.K_a:
-        Walknorth = False
+        Walkleft = False
 
 if event.type == pygame.KEYUP:
     if event.key == pygame.K_s:
-        Walknorth = False
+        Walkdown = False
 
 if event.type == pygame.KEYUP:
     if event.key == pygame.K_d:
-        Walknorth = False
+        Walkright = False
     
