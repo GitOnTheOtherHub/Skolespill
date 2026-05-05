@@ -1,58 +1,30 @@
 import pygame
-import sys
+
 pygame.init()
 
 win = pygame.display.set_mode((700, 500))
 pygame.display.set_caption ("Spill")
 
+timer = pygame.time.Clock
+fps = 60
+player_x = 300
+player_y = 300
+player_speed = 3
+
+class player:
+    def __init__(self, x, y):
+        self.rect = pygame.rect(x, y, 32, 32)  
+        self.x = x
+        self.y = y
+
 run = True
 while run:
-    pygame.time.delay(10)
+    #timer.tick(fps)
     for event in pygame.event.get():
         if event.type ==pygame.QUIT:
             run = False
+    pygame.display.flip()
 pygame.quit()
 
-#This method should be called once per frame. It will compute how many milliseconds have passed since the previous call.
-clock = pygame.time.Clock()
-
-Walkleft = False
-Walkright = False
-Walkup = False
-Walkdown = False
-
-if event.type == pygame.KEYDOWN:
-    if event.key == pygame.K_w:
-        Walkup = True
-        
-
-if event.type == pygame.KEYDOWN:
-    if event.key == pygame.K_a:
-        Walkleft = True
-
-if event.type == pygame.KEYDOWN:
-    if event.key == pygame.K_s:
-        Walkdown = True
-
-if event.type == pygame.KEYDOWN:
-    if event.key == pygame.K_d:
-        Walkright = True
 
 
-if event.type == pygame.KEYUP:
-    if event.key == pygame.K_w:
-        Walkup = False
-
-if event.type == pygame.KEYUP:
-    if event.key == pygame.K_a:
-        Walkleft = False
-
-if event.type == pygame.KEYUP:
-    if event.key == pygame.K_s:
-        Walkdown = False
-
-if event.type == pygame.KEYUP:
-    if event.key == pygame.K_d:
-        Walkright = False
-
-    
