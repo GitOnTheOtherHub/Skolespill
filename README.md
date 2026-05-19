@@ -1,2 +1,1 @@
-Legge til bevegelse; WASD
-legge til 
+Fuck ts

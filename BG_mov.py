@@ -9,7 +9,9 @@ timer = pygame.time.Clock
 fps = 60
 
 
-
+#lader inn bildet
+bg = pygame.image.load("background.jpg").convert()
+bg_width = bg.get_width()
 
 
 
