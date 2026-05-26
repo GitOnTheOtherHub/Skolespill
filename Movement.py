@@ -1,18 +1,26 @@
 import pygame
+import math
 
 pygame.init()
 
-win = pygame.display.set_mode((700, 500))
-pygame.display.set_caption ("Spill")
-
 timer = pygame.time.Clock
 fps = 60
+
+SCREEN_WIDTH = 1920
+SCREEN_HEIGHT = 600
+
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+pygame.display.set_caption ("Spill")
+
+
 
 
 #lader inn bildet
 bg = pygame.image.load("background.jpg").convert()
 bg_width = bg.get_width()
+screen.blit(bg, (0,0))
 
+tiles = math.ceil(SCREEN_WIDTH / bg_width) + 1
 
 
 
