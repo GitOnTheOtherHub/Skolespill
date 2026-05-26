@@ -27,7 +27,7 @@ while True:
             pygame.display.flip()
             pygame.quit()
 
-
+    screen.fill((50, 10, 10))
 
     #Bevegelse
     keys = pygame.key.get_pressed()
@@ -39,14 +39,16 @@ while True:
     square_x = max(0, min(WIDTH - square_size, square_x))
     square_y = max(0, min(HEIGHT - square_size, square_y))
 
-    # Drawing
-    screen.fill((30, 30, 30))  # background
-    pygame.draw.rect(
+    firkant = pygame.draw.rect(
         screen,
         (0, 200, 255),
         (square_x, square_y, square_size, square_size)
     )
 
+    sprite = pygame.image.load('Idle.png').convert_alpha()
+    screen.blit(sprite, firkant)
+
     pygame.display.flip()
     clock.tick
+
 

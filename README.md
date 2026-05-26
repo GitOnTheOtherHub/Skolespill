@@ -1,4 +1,4 @@
 lagt til bevegelse
 
-putte sprite på firkant
+Gjøre firkant usynelig
 skifte sprite
