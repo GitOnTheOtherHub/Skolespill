@@ -12,7 +12,6 @@ pygame.display.set_caption ("Spill")
 clock = pygame.time.Clock
 fps = 60
 
-#
 square_size = 50
 square_x = WIDTH // 1
 square_y = HEIGHT // 2
@@ -20,7 +19,8 @@ speed = 0.1
 
 
 #loop
-while True:
+run = True
+while run:
 
     for event in pygame.event.get():
         if event.type ==pygame.QUIT:
@@ -41,7 +41,7 @@ while True:
 
     firkant = pygame.draw.rect(
         screen,
-        (0, 200, 255),
+        (50, 10, 102),
         (square_x, square_y, square_size, square_size)
     )
 
@@ -50,5 +50,3 @@ while True:
 
     pygame.display.flip()
     clock.tick
-
-

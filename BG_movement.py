@@ -6,8 +6,8 @@ pygame.init()
 timer = pygame.time.Clock
 fps = 60
 
-SCREEN_WIDTH = 1920
-SCREEN_HEIGHT = 600
+SCREEN_WIDTH = 700
+SCREEN_HEIGHT = 500
 
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption ("Spill")

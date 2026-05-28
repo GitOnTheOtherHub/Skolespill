@@ -1,4 +1,10 @@
-lagt til bevegelse
 
-Gjøre firkant usynelig
+
+lag enemies
+    -bevegelse
+    -sprite
+    -angrep
+
+Spiller angrep
+
 skifte sprite
