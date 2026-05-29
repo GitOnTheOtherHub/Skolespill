@@ -13,15 +13,24 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption ("Spill")
 
 square_size = 50
-square_x = WIDTH // 1
+square_x = WIDTH // 2.1
 square_y = HEIGHT // 2
 speed = 0.07
 
-#lader inn bildet
+enemy_size = 50
+enemy_x = WIDTH // 1
+enemy_y = HEIGHT // 1
+enemy_speed = 1
+
+#lader inn bildene
 bg = pygame.image.load("background.jpg").convert()
 bg_width = bg.get_width()
 
+spiller = pygame.image.load('Idle.png').convert_alpha()
+bakterie = pygame.image.load('enemy.png').convert_alpha()
+
 tiles = math.ceil(WIDTH/ bg_width) + 1
+
 
 run = True
 while run:
@@ -51,9 +60,24 @@ while run:
         (square_x, square_y, square_size, square_size)
     )
 
-    sprite = pygame.image.load('Idle.png').convert_alpha()
-    screen.blit(sprite, firkant)
+    firkant_enemy = pygame.draw.rect(
+        screen,
+        (33, 94, 19),
+        (enemy_x, enemy_y, enemy_size, enemy_size)
+    )
+
+    screen.blit(spiller, firkant)
+    screen.blit(bakterie, firkant_enemy)
     
+    class enemy(pygame.Rect):
+        def __init__(self, x, y,):
+                pygame.Rect.__init__(self, x, y, enemy_x, enemy_y)
+                self.image = ('enemy.png')
+                self.velocity_x = 0.4
+                self.direction = "right"
+
+    # pygame.transform.scale(spiller, (100, 100))
+
     pygame.display.flip()
     timer.tick
 
